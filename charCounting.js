@@ -4,10 +4,12 @@ function countLetters(inputString){
   for (i = 0; i < inputString.length; i++) {
 
     var char = inputString[i];
-    if(outputObject.hasOwnProperty(char)){
-      outputObject[char] += 1;
-    } else {
-      outputObject[char] = 1;
+    if(char != ' '){
+      if(outputObject.hasOwnProperty(char)){
+        outputObject[char] += 1;
+      } else {
+          outputObject[char] = 1;
+      }
     }
   }
   return outputObject;
